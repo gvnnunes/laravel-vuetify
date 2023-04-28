@@ -88,10 +88,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
                             "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
                               return $data.form.email = $event;
                             }),
-                            label: "Digite seu e-mail",
+                            label: "E-mail",
                             variant: "outlined",
                             color: "indigo",
-                            type: "email"
+                            type: "email",
+                            "hide-details": "auto"
                           }, null, 8 /* PROPS */, ["modelValue"])];
                         }),
                         _: 1 /* STABLE */
@@ -105,12 +106,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
                             "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
                               return $data.form.password = $event;
                             }),
-                            label: "Digite sua senha",
+                            label: "Senha",
                             "append-inner-icon": $data.viewPassword ? 'mdi-eye-off' : 'mdi-eye',
                             variant: "outlined",
                             color: "indigo",
                             type: $data.viewPassword ? 'text' : 'password',
-                            "onClick:appendInner": $options.togglePassword
+                            "onClick:appendInner": $options.togglePassword,
+                            "hide-details": "auto"
                           }, null, 8 /* PROPS */, ["modelValue", "append-inner-icon", "type", "onClick:appendInner"])];
                         }),
                         _: 1 /* STABLE */

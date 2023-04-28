@@ -10,21 +10,23 @@
                         <v-col cols="12" sm="8">
                             <v-text-field
                                 v-model="form.email"
-                                label="Digite seu e-mail"
+                                label="E-mail"
                                 variant="outlined"
                                 color="indigo"
                                 type="email"
+                                hide-details="auto"
                             ></v-text-field>
                         </v-col>
                         <v-col cols="12" sm="8">
                             <v-text-field
                                 v-model="form.password"
-                                label="Digite sua senha"
+                                label="Senha"
                                 :append-inner-icon="viewPassword ? 'mdi-eye-off' : 'mdi-eye'"
                                 variant="outlined"
                                 color="indigo"
                                 :type="viewPassword ? 'text' : 'password'"
                                 @click:append-inner="togglePassword"
+                                hide-details="auto"
                             >
                             </v-text-field>
                         </v-col>
