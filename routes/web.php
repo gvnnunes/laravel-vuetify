@@ -21,6 +21,7 @@ Route::post('/login', [AuthController::class, 'login'])->name('auth.login');
 Route::post('/esqueceu-senha', [PasswordResetController::class, 'sendResetPasswordLink'])->name('password.forgot');
 Route::get('/recuperar-senha/{token}', [PasswordResetController::class, 'index'])->name('password.reset');
 Route::post('/recuperar-senha', [PasswordResetController::class, 'update'])->name('password.update');
+Route::post('revalidar-token', [AuthController::class, 'revalidarCsrfToken'])->name('auth.revalidar.token');
 
 Route::middleware('auth')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');

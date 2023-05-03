@@ -41,4 +41,11 @@ class AuthController extends Controller
         Auth::logout();
         return redirect()->route('login');
     }
+
+    public function revalidarCsrfToken()
+    {
+        return response()->json([
+            'message' => 'O token foi revalidado e a expiração da sessão foi estendida.'
+        ]);
+    }
 }
