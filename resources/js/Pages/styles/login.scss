@@ -1,0 +1,11 @@
+.v-window {
+    &-x-transition,
+    &-x-reverse-transition,
+    &-y-transition,
+    &-y-reverse-transition {
+        &-enter-active,
+        &-leave-active {
+            transition: 1.5s cubic-bezier(0.25, 0.8, 0.5, 1) !important;
+        }
+    }
+}
