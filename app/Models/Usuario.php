@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Notifications\PasswordReset;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -28,5 +29,10 @@ class Usuario extends Authenticatable
     public function getAuthPassword()
     {
         return $this->senha;
+    }
+
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new PasswordReset($token));
     }
 }
